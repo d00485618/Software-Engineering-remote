@@ -6,9 +6,13 @@ def getUserAge():
 
     userName = input("What is your name (first name, last name): ")
     while guessedRight != True:
-        askUser = input("Are you " + str(random.randint(15, 30)) + " years old? (y/n): ")
+        randomNum = random.randint(15, 30)
+        askUser = input("Are you " + str(randomNum) + " years old? (y/n): ")
         if askUser == y:
-            pass
+            print(str(userName) + " is " + str(randomNum) + "years old.")
+            guessedRight = True
+        else:
+            print("Rats!")
 
 
     userInput = input("")
